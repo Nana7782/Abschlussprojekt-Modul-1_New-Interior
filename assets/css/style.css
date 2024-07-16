@@ -1,3 +1,129 @@
+header {
+  background: url(../img/header.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.9rem 2.4rem 2.7rem 2.4rem;
+}
+header nav h1 {
+  font-family: "AlegreyaSCMed";
+  font-size: 2.25rem;
+  color: #fff;
+}
 
+.burger span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  background: #fff;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.main-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 13.5rem;
+}
+.main-heading h2 {
+  font-family: "NixieOneReg";
+  font-size: 3.25rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.main-heading p {
+  font-family: "AlegreyaSCReg";
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.gallery .gallery-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.75rem 8.44rem;
+}
+.gallery .gallery-heading .heading h3 {
+  font-family: "AlegreyaSansMed";
+  font-size: 2.25rem;
+  color: #3a4f52;
+}
+.gallery .gallery-heading .heading p {
+  font-family: "HelveticaNeueRoman";
+  font-size: 0.875rem;
+  color: #6a6a6a;
+}
+.gallery .gallery-heading .heading-button button {
+  width: 6rem;
+  height: 2.875rem;
+  border: 1px solid #3a4f52;
+  background-color: #fff;
+}
+.gallery .gallery-heading .heading-button button a {
+  font-family: "HelveticaNeueRoman";
+  font-size: 1.125rem;
+  color: #3a4f52;
+  text-decoration: none;
+}
+.gallery .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 3.75rem 8.44rem;
+}
+.gallery .gallery-grid .container {
+  width: 22.5rem;
+  height: 13.4rem;
+}
+.gallery .gallery-grid .container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service {
+  background: url(../img/hero2.png);
+  height: 51rem;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@font-face {
+  font-family: "AlegreyaSansMed";
+  src: url(../fonts/AlegreyaSans-Medium.ttf);
+}
+@font-face {
+  font-family: "AlegreyaSCMed";
+  src: url(../fonts/AlegreyaSC-Medium.ttf);
+}
+@font-face {
+  font-family: "AlegreyaSCReg";
+  src: url(../fonts/AlegreyaSC-Regular.ttf);
+}
+@font-face {
+  font-family: "HelveticaNeueRoman";
+  src: url(../fonts/HelveticaNeueRoman.otf);
+}
+@font-face {
+  font-family: "NixieOneReg";
+  src: url(../fonts/NixieOne-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /*# sourceMappingURL=style.css.map */

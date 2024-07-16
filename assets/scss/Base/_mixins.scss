@@ -1,0 +1,53 @@
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin heading {
+  h3 {
+    font-family: "AlegreyaSansMed";
+    font-size: 2.25rem;
+    color: #3a4f52;
+  }
+  p {
+    font-family: "HelveticaNeueRoman";
+    font-size: 0.875rem;
+    color: #6a6a6a;
+  }
+}
+
+@mixin heading-button {
+  button {
+    width: 6rem;
+    height: 2.875rem;
+    border: 1px solid #3a4f52;
+    background-color: #fff;
+    a {
+      font-family: "HelveticaNeueRoman";
+      font-size: 1.125rem;
+      color: #3a4f52;
+      text-decoration: none;
+    }
+  }
+}
+
+@mixin grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 3.75rem 8.44rem;
+}
+
+@mixin parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

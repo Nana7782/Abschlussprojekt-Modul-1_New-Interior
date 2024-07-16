@@ -1,0 +1,7 @@
+@use "../Base/mixins";
+
+.service {
+  background: url(../img/hero2.png);
+  height: 51rem;
+  @include mixins.parallax;
+}

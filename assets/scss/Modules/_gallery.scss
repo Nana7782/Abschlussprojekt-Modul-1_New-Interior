@@ -1,0 +1,27 @@
+@use "../Base/mixins";
+
+.gallery {
+  .gallery-heading {
+    @include mixins.flex-between;
+    padding: 3.75rem 8.44rem;
+    .heading {
+      @include mixins.heading;
+    }
+    .heading-button {
+      @include mixins.heading-button;
+    }
+  }
+
+  .gallery-grid {
+    @include mixins.grid-3col;
+    .container {
+      width: 22.5rem;
+      height: 13.4rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
