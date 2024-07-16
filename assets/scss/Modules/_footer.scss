@@ -1,0 +1,14 @@
+@use "../Base/fonts";
+@use "../Base/mixins";
+
+footer {
+  height: 10rem;
+  background-color: #2b3e51;
+  p {
+    font-family: "HelveticaNeueRoman";
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    padding: 4.5rem 8rem;
+  }
+}

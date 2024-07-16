@@ -1,3 +1,4 @@
+@use "../Base/fonts";
 @use "../Base/mixins";
 
 .gallery {
@@ -11,17 +12,66 @@
       @include mixins.heading-button;
     }
   }
+}
+.gallery-grid {
+  @include mixins.grid-3col;
+  margin: 3.75rem 8.44rem;
+  .container {
+    width: 22.5rem;
+    height: 13.4rem;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
 
-  .gallery-grid {
-    @include mixins.grid-3col;
-    margin: 3.75rem 8.44rem;
-    .container {
-      width: 22.5rem;
-      height: 13.4rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease 0s;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #02383ab2;
+      opacity: 0;
+      transition: opacity 0.5s ease 0s;
+    }
+
+    .overlay-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.5s ease 0s;
+
+      a {
+        font-family: "HelveticaNeueRoman";
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+        color: white;
+        text-decoration: none;
+        border: 1px solid #fff;
+        padding: 7px 13px;
+      }
+    }
+
+    &:hover {
       img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        transform: scale(1.1);
+      }
+
+      .overlay {
+        opacity: 1;
+      }
+
+      .overlay-button {
+        opacity: 1;
       }
     }
   }

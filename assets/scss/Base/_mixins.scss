@@ -1,3 +1,5 @@
+@use "../Base/fonts";
+
 @mixin flex-between {
   display: flex;
   align-items: center;
@@ -37,6 +39,7 @@
     height: 2.875rem;
     border: 1px solid #3a4f52;
     background-color: #fff;
+    cursor: pointer;
     a {
       font-family: "HelveticaNeueRoman";
       font-size: 1.125rem;
