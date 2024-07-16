@@ -3,6 +3,10 @@
 @use "./Modules/heading";
 @use "./Modules/gallery";
 @use "./Modules/services";
+@use "./Modules/blog";
+@use "./Modules/quote";
+@use "./Modules/testimonials";
+@use "./Modules/contact";
 
 @font-face {
   font-family: "AlegreyaSansMed";
@@ -19,6 +23,10 @@
 @font-face {
   font-family: "HelveticaNeueRoman";
   src: url(../fonts/HelveticaNeueRoman.otf);
+}
+@font-face {
+  font-family: "HelveticaNeueItalic";
+  src: url(../fonts/HelveticaNeueItalic.ttf);
 }
 @font-face {
   font-family: "NixieOneReg";

@@ -1,0 +1,23 @@
+@use "../Base/mixins";
+
+.quote {
+  background: url(../img/hero3.png);
+  @include mixins.parallax;
+  @include mixins.flex-center;
+  height: 45vh;
+}
+
+.quote-container {
+  @include mixins.flex-center;
+  @include mixins.heading;
+  margin: 0 8.44rem;
+  padding: 1.2rem 0.8rem;
+  background-color: #00000033;
+  h3 {
+    color: #fff;
+    padding: 0 2rem;
+  }
+  .container-button {
+    @include mixins.container-button;
+  }
+}

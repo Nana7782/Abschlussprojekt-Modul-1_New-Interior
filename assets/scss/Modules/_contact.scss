@@ -1,0 +1,41 @@
+@use "../Base/mixins";
+
+.contact {
+  background: url(../img/hero4.png);
+  height: 70vh;
+  @include mixins.parallax;
+  @include mixins.flex-center;
+
+  form {
+    @include mixins.flex-center;
+    @include mixins.heading;
+    background-color: #00000033;
+    width: 85%;
+    height: 85%;
+    h3,
+    p {
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+    .container-button {
+      @include mixins.container-button;
+    }
+    input {
+      width: 50%;
+      height: 10%;
+      margin-bottom: 1rem;
+      background-color: transparent;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      padding: 1rem;
+      color: #fff;
+      font-family: "HelveticaNeueRoman";
+      font-weight: 400;
+      font-size: 1rem;
+    }
+    input:last-of-type {
+      height: 20%;
+      padding-top: 0;
+    }
+  }
+}

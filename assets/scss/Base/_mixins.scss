@@ -10,10 +10,18 @@
   justify-content: center;
 }
 
+@mixin flex-start {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+}
+
 @mixin heading {
   h3 {
     font-family: "AlegreyaSansMed";
     font-size: 2.25rem;
+    font-weight: 500;
     color: #3a4f52;
   }
   p {
@@ -38,11 +46,23 @@
   }
 }
 
+@mixin container-button {
+  height: 2.2rem;
+  border: 1px solid #fff;
+  background-color: transparent;
+  font-family: "HelveticaNeueRoman";
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.7rem 1.01rem;
+  cursor: pointer;
+}
+
 @mixin grid-3col {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin: 3.75rem 8.44rem;
 }
 
 @mixin parallax {

@@ -14,6 +14,7 @@ header {
     h1 {
       font-family: "AlegreyaSCMed";
       font-size: 2.25rem;
+      font-weight: 500;
       color: #fff;
     }
   }
@@ -38,12 +39,14 @@ header {
   h2 {
     font-family: "NixieOneReg";
     font-size: 3.25rem;
+    font-weight: 400;
     text-transform: uppercase;
     color: #fff;
   }
   p {
     font-family: "AlegreyaSCReg";
     font-size: 1.4rem;
+    font-weight: 400;
     color: #fff;
   }
 }

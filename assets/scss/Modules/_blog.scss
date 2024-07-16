@@ -1,0 +1,52 @@
+@use "../Base/mixins";
+
+.blog {
+  height: 100vh;
+  .blog-heading {
+    @include mixins.flex-between;
+    padding: 1.75rem 8.44rem;
+    .heading {
+      @include mixins.heading;
+    }
+    .heading-button {
+      @include mixins.heading-button;
+    }
+  }
+
+  .blog-grid {
+    @include mixins.grid-3col;
+    margin: 3.75rem 8.44rem;
+    .blogpost {
+      @include mixins.flex-start;
+      width: 22.5rem;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      h4 {
+        font-family: "AlegreyaSansMed";
+        font-size: 1.875rem;
+        font-weight: 500;
+        color: #3a4f52;
+        margin: 1rem 0;
+      }
+      .date {
+        font-family: "HelveticaNeueItalic";
+        margin-bottom: 1rem;
+      }
+      p {
+        font-family: "HelveticaNeueRoman";
+        font-size: 0.875rem;
+        color: #6a6a6a;
+        margin-bottom: 1rem;
+      }
+
+      a {
+        font-family: "HelveticaNeueRoman";
+        font-size: 0.875rem;
+        color: #4da7ca;
+        text-decoration: none;
+      }
+    }
+  }
+}
