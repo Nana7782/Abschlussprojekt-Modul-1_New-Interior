@@ -40,7 +40,7 @@
       }
     }
     input:last-of-type {
-      height: 20%;
+      height: 15%;
     }
   }
 }
@@ -54,6 +54,16 @@
       width: 100%;
       input {
         width: 70%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    form {
+      input {
+        width: 90%;
       }
     }
   }

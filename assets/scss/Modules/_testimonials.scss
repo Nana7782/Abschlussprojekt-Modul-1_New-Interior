@@ -28,11 +28,13 @@
         font-family: "HelveticaNeueRoman";
         font-size: 0.85rem;
         font-weight: 700;
+
         color: #6a6a6a;
       }
       p {
         font-family: "HelveticaNeueRoman";
         font-size: 0.875rem;
+        line-height: 1.2rem;
         color: #6a6a6a;
         text-align: center;
         margin-bottom: 1.5rem;
@@ -57,6 +59,14 @@
       .customer {
         width: 90%;
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    .testi-grid {
+      margin: 3rem 1rem;
     }
   }
 }

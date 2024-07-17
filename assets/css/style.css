@@ -39,6 +39,7 @@ header nav {
 header nav h1 a {
   font-family: "AlegreyaSCMed";
   font-size: 2.25rem;
+  line-height: 2.25rem;
   font-weight: 500;
   color: #fff;
   text-decoration: none;
@@ -86,6 +87,22 @@ header nav h1 a:hover {
     margin-top: 8rem;
   }
 }
+@media (max-width: 768px) {
+  header {
+    height: 70vh;
+  }
+  header .main-heading {
+    margin-top: 6rem;
+  }
+  header .main-heading h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 0.75rem;
+  }
+  header .main-heading p {
+    font-size: 1.1rem;
+  }
+}
 .gallery .gallery-heading {
   margin: 3.75rem 8.44rem;
   display: flex;
@@ -127,6 +144,7 @@ header nav h1 a:hover {
   margin: 3.75rem 8.44rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   gap: 1rem;
 }
 .gallery-grid .container {
@@ -196,8 +214,17 @@ header nav h1 a:hover {
     margin: 4.125rem 0.56rem;
   }
   .gallery .gallery-grid .container {
-    width: 13.75rem;
-    height: 8.674rem;
+    min-width: 13.75rem;
+    min-height: 8.674rem;
+  }
+}
+@media (max-width: 768px) {
+  .gallery .gallery-grid {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .gallery .gallery-grid .container {
+    width: 99%;
   }
 }
 .service {
@@ -243,6 +270,7 @@ header nav h1 a:hover {
 .service-container .service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   gap: 1rem;
   row-gap: 3rem;
   margin: 3rem 0.25rem;
@@ -338,6 +366,7 @@ header nav h1 a:hover {
   margin: 3.75rem 8.44rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   gap: 1rem;
 }
 .blog .blog-grid .blogpost {
@@ -389,7 +418,16 @@ header nav h1 a:hover {
     margin: 4.125rem 0.56rem;
   }
   .blog .blog-grid .blogpost {
-    width: 13.75rem;
+    min-width: 13.75rem;
+  }
+}
+@media (max-width: 768px) {
+  .blog .blog-grid {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .blog .blog-grid .blogpost {
+    width: 99%;
   }
 }
 .quote {
@@ -433,6 +471,7 @@ header nav h1 a:hover {
   padding: 0 2rem;
 }
 .quote-container .container-button {
+  margin-top: 3rem;
   border: 1px solid #fff;
   background-color: transparent;
   font-family: "HelveticaNeueRoman";
@@ -455,8 +494,11 @@ header nav h1 a:hover {
   .quote .quote-container {
     margin: 4.125rem 0.56rem;
   }
+  .quote .quote-container h3 {
+    text-align: center;
+    padding: 0 1rem;
+  }
   .quote .quote-container .container-button {
-    margin-top: 1rem;
     border: 1px solid #fff;
     background-color: transparent;
     font-family: "HelveticaNeueRoman";
@@ -497,6 +539,7 @@ header nav h1 a:hover {
 .testimonials .testi-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   gap: 1rem;
   column-gap: 3rem;
   margin: 3.75rem 8.44rem;
@@ -523,6 +566,7 @@ header nav h1 a:hover {
 .testimonials .testi-grid .customer p {
   font-family: "HelveticaNeueRoman";
   font-size: 0.875rem;
+  line-height: 1.2rem;
   color: #6a6a6a;
   text-align: center;
   margin-bottom: 1.5rem;
@@ -543,6 +587,11 @@ header nav h1 a:hover {
   }
   .testimonials .testi-grid .customer {
     width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .testimonials .testi-grid {
+    margin: 3rem 1rem;
   }
 }
 .contact {
@@ -615,7 +664,7 @@ header nav h1 a:hover {
   padding-left: 1rem;
 }
 .contact form input:last-of-type {
-  height: 20%;
+  height: 15%;
 }
 
 @media (max-width: 992px) {
@@ -626,6 +675,11 @@ header nav h1 a:hover {
     width: 70%;
   }
 }
+@media (max-width: 768px) {
+  .contact form input {
+    width: 90%;
+  }
+}
 footer {
   height: 10rem;
   background-color: #2b3e51;
@@ -633,6 +687,7 @@ footer {
 footer p {
   font-family: "HelveticaNeueRoman";
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 400;
   color: #fff;
   padding: 4.5rem 8rem;
@@ -641,6 +696,13 @@ footer p {
 @media (max-width: 992px) {
   footer p {
     padding: 2rem 3rem;
+  }
+}
+@media (max-width: 768px) {
+  footer p {
+    padding: 2rem 2rem;
+    width: 45%;
+    text-wrap: wrap;
   }
 }
 * {

@@ -98,8 +98,20 @@
     .gallery-grid {
       margin: 4.125rem 0.56rem;
       .container {
-        width: 13.75rem;
-        height: 8.674rem;
+        min-width: 13.75rem;
+        min-height: 8.674rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+      .container {
+        width: 99%;
       }
     }
   }

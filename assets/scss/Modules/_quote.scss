@@ -23,6 +23,7 @@
     padding: 0 2rem;
   }
   .container-button {
+    margin-top: 3rem;
     @include mixins.container-button;
   }
 }
@@ -34,8 +35,11 @@
     height: 100%;
     .quote-container {
       margin: 4.125rem 0.56rem;
+      h3 {
+        text-align: center;
+        padding: 0 1rem;
+      }
       .container-button {
-        margin-top: 1rem;
         @include mixins.container-button;
       }
     }

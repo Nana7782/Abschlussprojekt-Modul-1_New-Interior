@@ -69,7 +69,19 @@
     .blog-grid {
       margin: 4.125rem 0.56rem;
       .blogpost {
-        width: 13.75rem;
+        min-width: 13.75rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .blog {
+    .blog-grid {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+      .blogpost {
+        width: 99%;
       }
     }
   }
