@@ -2,10 +2,10 @@
 @use "../Base/mixins";
 
 .blog {
-  height: 100vh;
+  height: 100%;
   .blog-heading {
     @include mixins.flex-between;
-    padding: 1.75rem 8.44rem;
+    margin: 1.75rem 8.44rem;
     .heading {
       @include mixins.heading;
     }
@@ -15,8 +15,9 @@
   }
 
   .blog-grid {
-    @include mixins.grid-3col;
     margin: 3.75rem 8.44rem;
+    @include mixins.grid-3col;
+
     .blogpost {
       @include mixins.flex-start;
       width: 22.5rem;
@@ -47,6 +48,28 @@
         font-size: 0.875rem;
         color: #4da7ca;
         text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+//  #  MEDIA QUERIES
+
+@media (max-width: 992px) {
+  .blog {
+    .blog-heading {
+      margin: 4.125rem 0.56rem;
+      .heading-button {
+        padding-right: 0.6rem;
+      }
+    }
+    .blog-grid {
+      margin: 4.125rem 0.56rem;
+      .blogpost {
+        width: 13.75rem;
       }
     }
   }

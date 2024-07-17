@@ -5,8 +5,9 @@
   height: 75vh;
   @include mixins.flex-center;
   .testi-heading {
-    @include mixins.heading;
     text-align: center;
+    margin-top: 1rem;
+    @include mixins.heading;
   }
 
   .testi-grid {
@@ -35,6 +36,26 @@
         color: #6a6a6a;
         text-align: center;
         margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+//  #  MEDIA QUERIES
+
+@media (max-width: 992px) {
+  .testimonials {
+    height: 100%;
+    .service-container {
+      margin: 4.125rem 0.56rem;
+    }
+    .testi-grid {
+      margin: 4.125rem 0.56rem;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      row-gap: 2rem;
+      .customer {
+        width: 90%;
       }
     }
   }

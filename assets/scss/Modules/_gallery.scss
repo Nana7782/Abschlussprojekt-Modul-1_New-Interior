@@ -3,8 +3,9 @@
 
 .gallery {
   .gallery-heading {
+    margin: 3.75rem 8.44rem;
     @include mixins.flex-between;
-    padding: 3.75rem 8.44rem;
+
     .heading {
       @include mixins.heading;
     }
@@ -14,8 +15,9 @@
   }
 }
 .gallery-grid {
-  @include mixins.grid-3col;
   margin: 3.75rem 8.44rem;
+  @include mixins.grid-3col;
+
   .container {
     width: 22.5rem;
     height: 13.4rem;
@@ -51,13 +53,19 @@
 
       a {
         font-family: "HelveticaNeueRoman";
-        font-size: 0.875rem;
+        font-size: 0.85rem;
         font-weight: 400;
-        line-height: 1.25rem;
+        // line-height: 1.25rem;
         color: white;
         text-decoration: none;
+        width: 109px;
+        height: 34px;
         border: 1px solid #fff;
         padding: 7px 13px;
+        &:hover {
+          background-color: #fff;
+          color: #3a4f52;
+        }
       }
     }
 
@@ -72,6 +80,26 @@
 
       .overlay-button {
         opacity: 1;
+      }
+    }
+  }
+}
+
+//  #  MEDIA QUERIES
+
+@media (max-width: 992px) {
+  .gallery {
+    .gallery-heading {
+      margin: 4.125rem 0.56rem;
+      .heading-button {
+        padding-right: 0.6rem;
+      }
+    }
+    .gallery-grid {
+      margin: 4.125rem 0.56rem;
+      .container {
+        width: 13.75rem;
+        height: 8.674rem;
       }
     }
   }

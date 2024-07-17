@@ -26,6 +26,7 @@
     font-weight: 500;
     color: #3a4f52;
   }
+
   p {
     font-family: "HelveticaNeueRoman";
     font-size: 0.875rem;
@@ -40,6 +41,12 @@
     border: 1px solid #3a4f52;
     background-color: #fff;
     cursor: pointer;
+    &:hover {
+      background-color: #3a4f52;
+      a {
+        color: #fff;
+      }
+    }
     a {
       font-family: "HelveticaNeueRoman";
       font-size: 1.125rem;
@@ -50,7 +57,6 @@
 }
 
 @mixin container-button {
-  height: 2.2rem;
   border: 1px solid #fff;
   background-color: transparent;
   font-family: "HelveticaNeueRoman";
@@ -58,8 +64,12 @@
   font-weight: 400;
   color: #fff;
   text-decoration: none;
-  padding: 0.7rem 1.01rem;
+  padding: 1rem;
   cursor: pointer;
+  &:hover {
+    background-color: #fff;
+    color: #6a6a6a;
+  }
 }
 
 @mixin grid-3col {

@@ -12,3 +12,13 @@ footer {
     padding: 4.5rem 8rem;
   }
 }
+
+//  #  MEDIA QUERIES
+
+@media (max-width: 992px) {
+  footer {
+    p {
+      padding: 2rem 3rem;
+    }
+  }
+}

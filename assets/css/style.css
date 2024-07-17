@@ -36,11 +36,15 @@ header nav {
   justify-content: space-between;
   padding: 1.9rem 2.4rem 2.7rem 2.4rem;
 }
-header nav h1 {
+header nav h1 a {
   font-family: "AlegreyaSCMed";
   font-size: 2.25rem;
   font-weight: 500;
   color: #fff;
+  text-decoration: none;
+}
+header nav h1 a:hover {
+  text-decoration: underline;
 }
 
 .burger span {
@@ -51,6 +55,9 @@ header nav h1 {
   background: #fff;
   border-radius: 3px;
   z-index: 1;
+}
+.burger:hover {
+  cursor: pointer;
 }
 
 .main-heading {
@@ -74,11 +81,16 @@ header nav h1 {
   color: #fff;
 }
 
+@media (max-width: 992px) {
+  .main-heading {
+    margin-top: 8rem;
+  }
+}
 .gallery .gallery-heading {
+  margin: 3.75rem 8.44rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3.75rem 8.44rem;
 }
 .gallery .gallery-heading .heading h3 {
   font-family: "AlegreyaSansMed";
@@ -98,6 +110,12 @@ header nav h1 {
   background-color: #fff;
   cursor: pointer;
 }
+.gallery .gallery-heading .heading-button button:hover {
+  background-color: #3a4f52;
+}
+.gallery .gallery-heading .heading-button button:hover a {
+  color: #fff;
+}
 .gallery .gallery-heading .heading-button button a {
   font-family: "HelveticaNeueRoman";
   font-size: 1.125rem;
@@ -106,10 +124,10 @@ header nav h1 {
 }
 
 .gallery-grid {
+  margin: 3.75rem 8.44rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin: 3.75rem 8.44rem;
 }
 .gallery-grid .container {
   width: 22.5rem;
@@ -144,13 +162,18 @@ header nav h1 {
 }
 .gallery-grid .container .overlay-button a {
   font-family: "HelveticaNeueRoman";
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 400;
-  line-height: 1.25rem;
   color: white;
   text-decoration: none;
+  width: 109px;
+  height: 34px;
   border: 1px solid #fff;
   padding: 7px 13px;
+}
+.gallery-grid .container .overlay-button a:hover {
+  background-color: #fff;
+  color: #3a4f52;
 }
 .gallery-grid .container:hover img {
   transform: scale(1.1);
@@ -162,6 +185,21 @@ header nav h1 {
   opacity: 1;
 }
 
+@media (max-width: 992px) {
+  .gallery .gallery-heading {
+    margin: 4.125rem 0.56rem;
+  }
+  .gallery .gallery-heading .heading-button {
+    padding-right: 0.6rem;
+  }
+  .gallery .gallery-grid {
+    margin: 4.125rem 0.56rem;
+  }
+  .gallery .gallery-grid .container {
+    width: 13.75rem;
+    height: 8.674rem;
+  }
+}
 .service {
   background: url(../img/hero2.png);
   height: 70vh;
@@ -178,6 +216,7 @@ header nav h1 {
 .service-container {
   margin: 5rem 8.44rem 5rem 8.44rem;
   background-color: rgba(0, 0, 0, 0.2);
+  max-height: 90%;
 }
 .service-container .service-heading {
   padding-top: 1.25rem;
@@ -239,14 +278,31 @@ header nav h1 {
   padding: 0 3rem;
 }
 
+@media (max-width: 992px) {
+  .service {
+    height: 100%;
+  }
+  .service .service-container {
+    margin: 4.125rem 0.56rem;
+  }
+  .service .service-grid {
+    margin: 4.125rem 0.56rem;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+  .service .service-grid .container {
+    width: 13.75rem;
+    height: 8.674rem;
+  }
+}
 .blog {
-  height: 100vh;
+  height: 100%;
 }
 .blog .blog-heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.75rem 8.44rem;
+  margin: 1.75rem 8.44rem;
 }
 .blog .blog-heading .heading h3 {
   font-family: "AlegreyaSansMed";
@@ -266,6 +322,12 @@ header nav h1 {
   background-color: #fff;
   cursor: pointer;
 }
+.blog .blog-heading .heading-button button:hover {
+  background-color: #3a4f52;
+}
+.blog .blog-heading .heading-button button:hover a {
+  color: #fff;
+}
 .blog .blog-heading .heading-button button a {
   font-family: "HelveticaNeueRoman";
   font-size: 1.125rem;
@@ -273,10 +335,10 @@ header nav h1 {
   text-decoration: none;
 }
 .blog .blog-grid {
+  margin: 3.75rem 8.44rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin: 3.75rem 8.44rem;
 }
 .blog .blog-grid .blogpost {
   display: flex;
@@ -312,7 +374,24 @@ header nav h1 {
   color: #4da7ca;
   text-decoration: none;
 }
+.blog .blog-grid .blogpost a:hover {
+  text-decoration: underline;
+}
 
+@media (max-width: 992px) {
+  .blog .blog-heading {
+    margin: 4.125rem 0.56rem;
+  }
+  .blog .blog-heading .heading-button {
+    padding-right: 0.6rem;
+  }
+  .blog .blog-grid {
+    margin: 4.125rem 0.56rem;
+  }
+  .blog .blog-grid .blogpost {
+    width: 13.75rem;
+  }
+}
 .quote {
   background: url(../img/hero3.png);
   background-attachment: fixed;
@@ -331,9 +410,6 @@ header nav h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 8.44rem;
-  padding: 1.2rem 0.8rem;
-  background-color: rgba(0, 0, 0, 0.2);
 }
 .quote-container h3 {
   font-family: "AlegreyaSansMed";
@@ -346,12 +422,17 @@ header nav h1 {
   font-size: 0.875rem;
   color: #6a6a6a;
 }
+.quote-container {
+  padding: 1.2rem 0.8rem;
+  margin: 0 8.44rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  max-height: 90%;
+}
 .quote-container h3 {
   color: #fff;
   padding: 0 2rem;
 }
 .quote-container .container-button {
-  height: 2.2rem;
   border: 1px solid #fff;
   background-color: transparent;
   font-family: "HelveticaNeueRoman";
@@ -359,10 +440,38 @@ header nav h1 {
   font-weight: 400;
   color: #fff;
   text-decoration: none;
-  padding: 0.7rem 1.01rem;
+  padding: 1rem;
   cursor: pointer;
 }
+.quote-container .container-button:hover {
+  background-color: #fff;
+  color: #6a6a6a;
+}
 
+@media (max-width: 992px) {
+  .quote {
+    height: 100%;
+  }
+  .quote .quote-container {
+    margin: 4.125rem 0.56rem;
+  }
+  .quote .quote-container .container-button {
+    margin-top: 1rem;
+    border: 1px solid #fff;
+    background-color: transparent;
+    font-family: "HelveticaNeueRoman";
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .quote .quote-container .container-button:hover {
+    background-color: #fff;
+    color: #6a6a6a;
+  }
+}
 .testimonials {
   height: 75vh;
   display: flex;
@@ -372,6 +481,7 @@ header nav h1 {
 }
 .testimonials .testi-heading {
   text-align: center;
+  margin-top: 1rem;
 }
 .testimonials .testi-heading h3 {
   font-family: "AlegreyaSansMed";
@@ -418,6 +528,23 @@ header nav h1 {
   margin-bottom: 1.5rem;
 }
 
+@media (max-width: 992px) {
+  .testimonials {
+    height: 100%;
+  }
+  .testimonials .service-container {
+    margin: 4.125rem 0.56rem;
+  }
+  .testimonials .testi-grid {
+    margin: 4.125rem 0.56rem;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 2rem;
+  }
+  .testimonials .testi-grid .customer {
+    width: 90%;
+  }
+}
 .contact {
   background: url(../img/hero4.png);
   height: 70vh;
@@ -435,9 +562,6 @@ header nav h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.2);
-  width: 85%;
-  height: 85%;
 }
 .contact form h3 {
   font-family: "AlegreyaSansMed";
@@ -450,13 +574,17 @@ header nav h1 {
   font-size: 0.875rem;
   color: #6a6a6a;
 }
+.contact form {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 85%;
+  height: 85%;
+}
 .contact form h3,
 .contact form p {
   color: #fff;
   margin-bottom: 1.5rem;
 }
 .contact form .container-button {
-  height: 2.2rem;
   border: 1px solid #fff;
   background-color: transparent;
   font-family: "HelveticaNeueRoman";
@@ -464,8 +592,12 @@ header nav h1 {
   font-weight: 400;
   color: #fff;
   text-decoration: none;
-  padding: 0.7rem 1.01rem;
+  padding: 1rem;
   cursor: pointer;
+}
+.contact form .container-button:hover {
+  background-color: #fff;
+  color: #6a6a6a;
 }
 .contact form input {
   width: 50%;
@@ -474,17 +606,26 @@ header nav h1 {
   background-color: transparent;
   border: 1px solid #fff;
   border-radius: 4px;
-  padding: 1rem;
-  color: #fff;
   font-family: "HelveticaNeueRoman";
   font-weight: 400;
   font-size: 1rem;
 }
+.contact form input::placeholder {
+  color: #fff;
+  padding-left: 1rem;
+}
 .contact form input:last-of-type {
   height: 20%;
-  padding-top: 0;
 }
 
+@media (max-width: 992px) {
+  .contact form {
+    width: 100%;
+  }
+  .contact form input {
+    width: 70%;
+  }
+}
 footer {
   height: 10rem;
   background-color: #2b3e51;
@@ -497,6 +638,11 @@ footer p {
   padding: 4.5rem 8rem;
 }
 
+@media (max-width: 992px) {
+  footer p {
+    padding: 2rem 3rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;
