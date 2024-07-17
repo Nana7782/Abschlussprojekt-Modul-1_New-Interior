@@ -4,8 +4,9 @@
 .blog {
   height: 100%;
   .blog-heading {
-    @include mixins.flex-between;
     margin: 1.75rem 8.44rem;
+    @include mixins.flex-between;
+
     .heading {
       @include mixins.heading;
     }
@@ -19,8 +20,9 @@
     @include mixins.grid-3col;
 
     .blogpost {
-      @include mixins.flex-start;
       width: 22.5rem;
+      @include mixins.flex-start;
+
       img {
         width: 100%;
         object-fit: cover;
@@ -69,7 +71,7 @@
     .blog-grid {
       margin: 4.125rem 0.56rem;
       .blogpost {
-        min-width: 13.75rem;
+        width: 13.75rem;
       }
     }
   }

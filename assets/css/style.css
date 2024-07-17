@@ -27,6 +27,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  object-fit: cover;
   height: 100vh;
   width: 100%;
 }
@@ -82,12 +83,12 @@ header nav h1 a:hover {
   color: #fff;
 }
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .main-heading {
     margin-top: 8rem;
   }
 }
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   header {
     height: 70vh;
   }
@@ -203,7 +204,7 @@ header nav h1 a:hover {
   opacity: 1;
 }
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .gallery .gallery-heading {
     margin: 4.125rem 0.56rem;
   }
@@ -214,11 +215,11 @@ header nav h1 a:hover {
     margin: 4.125rem 0.56rem;
   }
   .gallery .gallery-grid .container {
-    min-width: 13.75rem;
-    min-height: 8.674rem;
+    width: 13.75rem;
+    height: 8.674rem;
   }
 }
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .gallery .gallery-grid {
     grid-template-columns: 1fr;
     row-gap: 2rem;
@@ -245,10 +246,6 @@ header nav h1 a:hover {
   background-color: rgba(0, 0, 0, 0.2);
   max-height: 90%;
 }
-.service-container .service-heading {
-  padding-top: 1.25rem;
-  text-align: center;
-}
 .service-container .service-heading h3 {
   font-family: "AlegreyaSansMed";
   font-size: 2.25rem;
@@ -259,6 +256,10 @@ header nav h1 a:hover {
   font-family: "HelveticaNeueRoman";
   font-size: 0.875rem;
   color: #6a6a6a;
+}
+.service-container .service-heading {
+  padding-top: 1.25rem;
+  text-align: center;
 }
 .service-container .service-heading h3 {
   color: #fff;
@@ -272,6 +273,8 @@ header nav h1 a:hover {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   gap: 1rem;
+}
+.service-container .service-grid {
   row-gap: 3rem;
   margin: 3rem 0.25rem;
 }
@@ -306,7 +309,7 @@ header nav h1 a:hover {
   padding: 0 3rem;
 }
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .service {
     height: 100%;
   }
@@ -327,10 +330,10 @@ header nav h1 a:hover {
   height: 100%;
 }
 .blog .blog-heading {
+  margin: 1.75rem 8.44rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 1.75rem 8.44rem;
 }
 .blog .blog-heading .heading h3 {
   font-family: "AlegreyaSansMed";
@@ -370,11 +373,11 @@ header nav h1 a:hover {
   gap: 1rem;
 }
 .blog .blog-grid .blogpost {
+  width: 22.5rem;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: flex-start;
-  width: 22.5rem;
 }
 .blog .blog-grid .blogpost img {
   width: 100%;
@@ -418,7 +421,7 @@ header nav h1 a:hover {
     margin: 4.125rem 0.56rem;
   }
   .blog .blog-grid .blogpost {
-    min-width: 13.75rem;
+    width: 13.75rem;
   }
 }
 @media (max-width: 768px) {
@@ -432,6 +435,7 @@ header nav h1 a:hover {
 }
 .quote {
   background: url(../img/hero3.png);
+  height: 45vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -440,7 +444,6 @@ header nav h1 a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 45vh;
 }
 
 .quote-container {
@@ -471,7 +474,6 @@ header nav h1 a:hover {
   padding: 0 2rem;
 }
 .quote-container .container-button {
-  margin-top: 3rem;
   border: 1px solid #fff;
   background-color: transparent;
   font-family: "HelveticaNeueRoman";
@@ -486,8 +488,11 @@ header nav h1 a:hover {
   background-color: #fff;
   color: #6a6a6a;
 }
+.quote-container .container-button {
+  margin-top: 3rem;
+}
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .quote {
     height: 100%;
   }
@@ -498,21 +503,6 @@ header nav h1 a:hover {
     text-align: center;
     padding: 0 1rem;
   }
-  .quote .quote-container .container-button {
-    border: 1px solid #fff;
-    background-color: transparent;
-    font-family: "HelveticaNeueRoman";
-    font-size: 1.125rem;
-    font-weight: 400;
-    color: #fff;
-    text-decoration: none;
-    padding: 1rem;
-    cursor: pointer;
-  }
-  .quote .quote-container .container-button:hover {
-    background-color: #fff;
-    color: #6a6a6a;
-  }
 }
 .testimonials {
   height: 75vh;
@@ -520,10 +510,6 @@ header nav h1 a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.testimonials .testi-heading {
-  text-align: center;
-  margin-top: 1rem;
 }
 .testimonials .testi-heading h3 {
   font-family: "AlegreyaSansMed";
@@ -536,11 +522,17 @@ header nav h1 a:hover {
   font-size: 0.875rem;
   color: #6a6a6a;
 }
+.testimonials .testi-heading {
+  text-align: center;
+  margin-top: 1rem;
+}
 .testimonials .testi-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   gap: 1rem;
+}
+.testimonials .testi-grid {
   column-gap: 3rem;
   margin: 3.75rem 8.44rem;
 }
@@ -572,7 +564,7 @@ header nav h1 a:hover {
   margin-bottom: 1.5rem;
 }
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .testimonials {
     height: 100%;
   }
@@ -589,7 +581,7 @@ header nav h1 a:hover {
     width: 90%;
   }
 }
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .testimonials .testi-grid {
     margin: 3rem 1rem;
   }
@@ -667,7 +659,7 @@ header nav h1 a:hover {
   height: 15%;
 }
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .contact form {
     width: 100%;
   }
@@ -675,7 +667,7 @@ header nav h1 a:hover {
     width: 70%;
   }
 }
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .contact form input {
     width: 90%;
   }
@@ -693,12 +685,12 @@ footer p {
   padding: 4.5rem 8rem;
 }
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   footer p {
     padding: 2rem 3rem;
   }
 }
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   footer p {
     padding: 2rem 2rem;
     width: 45%;

@@ -4,6 +4,7 @@
 .service {
   background: url(../img/hero2.png);
   height: 70vh;
+
   @include mixins.parallax;
   @include mixins.flex-center;
 }
@@ -13,9 +14,11 @@
   max-height: 90%;
 
   .service-heading {
-    padding-top: 1.25rem;
-    text-align: center;
     @include mixins.heading;
+    & {
+      padding-top: 1.25rem;
+      text-align: center;
+    }
     h3 {
       color: #fff;
       margin-bottom: 1.25rem;
@@ -26,8 +29,10 @@
   }
   .service-grid {
     @include mixins.grid-3col;
-    row-gap: 3rem;
-    margin: 3rem 0.25rem;
+    & {
+      row-gap: 3rem;
+      margin: 3rem 0.25rem;
+    }
     .services {
       @include mixins.flex-center;
       img {
@@ -50,7 +55,7 @@
 
 //  #  MEDIA QUERIES
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .service {
     height: 100%;
     .service-container {

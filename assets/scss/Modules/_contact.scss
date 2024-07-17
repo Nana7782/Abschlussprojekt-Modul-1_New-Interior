@@ -4,6 +4,7 @@
 .contact {
   background: url(../img/hero4.png);
   height: 70vh;
+
   @include mixins.parallax;
   @include mixins.flex-center;
 
@@ -47,7 +48,7 @@
 
 //  #  MEDIA QUERIES
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .contact {
     // height: 100%;
     form {
@@ -59,7 +60,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .contact {
     form {
       input {

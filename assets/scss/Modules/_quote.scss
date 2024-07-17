@@ -3,9 +3,9 @@
 
 .quote {
   background: url(../img/hero3.png);
+  height: 45vh;
   @include mixins.parallax;
   @include mixins.flex-center;
-  height: 45vh;
 }
 
 .quote-container {
@@ -23,14 +23,16 @@
     padding: 0 2rem;
   }
   .container-button {
-    margin-top: 3rem;
     @include mixins.container-button;
+    & {
+      margin-top: 3rem;
+    }
   }
 }
 
 //  #  MEDIA QUERIES
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .quote {
     height: 100%;
     .quote-container {
@@ -38,9 +40,6 @@
       h3 {
         text-align: center;
         padding: 0 1rem;
-      }
-      .container-button {
-        @include mixins.container-button;
       }
     }
   }

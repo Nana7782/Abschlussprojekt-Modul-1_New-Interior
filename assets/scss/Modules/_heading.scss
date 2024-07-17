@@ -6,12 +6,14 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  object-fit: cover;
   height: 100vh;
   width: 100%;
 
   nav {
     @include mixins.flex-between;
     padding: 1.9rem 2.4rem 2.7rem 2.4rem;
+
     h1 {
       a {
         font-family: "AlegreyaSCMed";
@@ -34,11 +36,8 @@ header {
     width: 33px;
     height: 4px;
     margin-bottom: 5px;
-    //   position: relative;
-
     background: #fff;
     border-radius: 3px;
-
     z-index: 1;
   }
   &:hover {
@@ -49,6 +48,7 @@ header {
 .main-heading {
   @include mixins.flex-center;
   margin-top: 13.5rem;
+
   h2 {
     font-family: "NixieOneReg";
     font-size: 3.25rem;
@@ -66,13 +66,13 @@ header {
 
 //  #  MEDIA QUERIES
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .main-heading {
     margin-top: 8rem;
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   header {
     height: 70vh;
     .main-heading {
